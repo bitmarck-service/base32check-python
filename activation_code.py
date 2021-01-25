@@ -32,7 +32,9 @@ if __name__ == '__main__':
         ('7MAA AAAA AAAV BPNN', 0xA_85ED, 0x3EC),
         ('7UAI UJAG CIM4 5TFZ', 0x451_2030_90CE_7665, 0x3F4),
         ('77AA AAAA AAAA 7EBF', 0x7C81, 0x3FF),
-        ('77A7 7777 7777 7773', 0xFFF_FFFF_FFFF_FFFF, 0x3FF)
+        ('77A7 7777 7777 7773', 0xFFF_FFFF_FFFF_FFFF, 0x3FF),
+        ('BLAB LABL ABLA BLA3', 0xAC_0158_02B0_0560, 0x2B),
+        ('BLAF ASEL GEDO ENSU', 0x282_4459_8837_11B2, 0x2B),
     )
     for i, (activation_code, specific_code, insurance_corp_code) in zip(range(len(tests)), tests):
         formatted = format(compute(insurance_corp_code=insurance_corp_code, specific_code=specific_code))

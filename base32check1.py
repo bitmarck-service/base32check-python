@@ -92,6 +92,8 @@ if __name__ == '__main__':
         'CAFEDEADA',
         'DEADBEEFL',
         '234567Z',
+        'BLAB LABL ABLA BLA3',
+        'BLAF ASEL GEDO ENSU',
     )
     for i, test in zip(range(len(tests)), tests):
         assert validate(test), f'File "{__file__}", line {line + i}: Invalid Base32check1 string: {test}'
