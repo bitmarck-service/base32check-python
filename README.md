@@ -5,6 +5,8 @@
 # base32check-python
 
 This project is a Python 3 implementation of the [base32check1](https://base32check.org/) algorithm.
+The minimum requirement is Python 3.6.
+There are no additional requirements/dependencies.
 
 ## License
 
