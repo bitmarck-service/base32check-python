@@ -1,0 +1,25 @@
+# https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+---
+jobs:
+  build:
+    if: "!contains(toJSON(github.event.commits.*.message), '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Test Base32check1
+        run: python3 -m base32check1
+      - name: Test Activation Code
+        run: python3 -m activation_code
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8, 3.9]
+name: test
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
