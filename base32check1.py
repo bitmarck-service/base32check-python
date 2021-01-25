@@ -34,7 +34,7 @@ def _compute(payload):
 
 
 def _primitive_powers(primitive):
-    mat = [(), primitive]
+    mat = [[], primitive]
     for i in range(2, _CARDINAL):
         values = _mat_mul(mat[i - 1], primitive)
         if i < _CARDINAL - 1:
