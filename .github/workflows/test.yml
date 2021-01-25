@@ -16,7 +16,7 @@ jobs:
         run: python3 -m activation_code
     strategy:
       matrix:
-        python-version: [3.5, 3.9]
+        python-version: [3.6, 3.9]
 name: test
 on:
   pull_request:
