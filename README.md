@@ -11,3 +11,20 @@ There are no additional requirements/dependencies.
 ## License
 
 This project is covered by the [Apache License, Version 2](LICENSE).
+
+## Release
+
+For an easy release process and upload to PyPI [zest.releaser]
+(https://github.com/zestsoftware/zest.releaser) can be used.
+
+First you have to configure your `~/.pypirc` with your credentials. ([doc]
+(https://zestreleaser.readthedocs.io/en/latest/uploading.html#pypi-configuration-file-pypirc))
+Then you can start the release process.
+
+
+````bash
+$ python3.9 -m venv venv
+$ venv/bin pip install zest.releaser[recommended]
+$ venv/bin/fullrelease
+
+```
